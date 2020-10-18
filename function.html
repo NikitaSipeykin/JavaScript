@@ -1,0 +1,74 @@
+<meta charset="utf-8">
+<!-- 1. Функции для работы с массивами
+a. Написать функцию, которая принимает в качестве параметра число n. Результатом работы функции является массив из N элементов со значениями 1, 2, 3… n.
+b. Написать функцию, которая принимает массив чисел. Результатом работы функции является сумма чисел этого массива.
+c. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает максимальное число.
+d. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает минимальное число.
+f. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает только четные числа из этого массива. Чтобы определить четность числа, воспользуйтесь оператором для подсчета остатка от деления: x % 2. Если остаток от деления числа на 2 равен 0, число будет четное. -->
+<script type="text/javascript">
+
+	var arr = arrCreator(10);
+	var summ = arrSum(arr);
+	var max = maxNumber(arr);
+	var min = minNumber(arr);
+	var even = evenNumber(arr);
+	alert(summ);
+	alert(max);
+	alert(min);
+	alert(even);
+
+	function arrCreator(n){
+		var numbers = [];
+		for(var i = 0; i < n; i++){
+			numbers.push(i+1);
+		}
+		return numbers;
+	}
+	function arrSum(arr){
+		var a = 0;
+		for(var i = 0; i < arr.length; i++){
+			a = a + arr[i];
+		}
+		return a;
+	}
+	function maxNumber(arr){
+		var a = arr[0];
+		for(var i = 0; i < arr.length; i++){
+			if(arr[i]>a){
+				a = arr[i];
+			}
+			else{
+				continue;
+			}
+		}
+		return a;
+	}
+	function minNumber(arr){
+		var a = arr[0];
+		for(var i = 0; i < arr.length; i++){
+			if(arr[i]<a){
+				a = arr[i];
+			}
+			else{
+				continue;
+			}
+		}
+		return a;
+	}
+	function evenNumber(arr){
+		var a;
+		for(var i = 0; i < arr.length; i++){
+			a = arr[i] % 2;
+			if(a == 0){
+				continue;
+			}
+			else{
+				arr.splice(i,1);
+				i = i - 1;
+			}
+		}
+		return arr;
+	}
+
+
+</script>
