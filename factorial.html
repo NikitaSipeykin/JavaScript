@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var f = factorial(5);
+	var rf = recursiveFactorial(4)
+
+	function factorial(n){
+
+		var result = 1;
+		for(var i = 1; i <= n; i++){
+			result = result * i;
+		}
+		return result;
+	}
+	function recursiveFactorial(n){ // это самая настоящая кодировочная парнуха! жесткая блять порнуха!
+		if(n == 0){
+			return 1;
+		}
+		else{
+			return recursiveFactorial(n - 1) * n;  //дикая штука! возвращаемое значение вызывает эту же функцию по новой, создавая циклы, до тех пор пока не дойдет до ноля(при этом все циклы сохраняются и как только эта херня доходит до конца, циклы начинают распутываться и каждый цикл умнажается на сохраненное в этом цикле значение n) ... BOOM!
+		}
+	}
+
+
+</script>
