@@ -3,4 +3,5 @@
 		<a href="puzzle.php">Загадки</a>
 		<a href="guess.php">Угадайка</a>
 		<a href="guessMultiplayer.php">Угадайка на двоих</a>
+		<a href="password.php">Генератор паролей</a>
 	</div>
